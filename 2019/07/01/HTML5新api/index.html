@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HTML5新的 API1.  全屏API（Fullscreen API）　　该API允许开发者以编程方式将Web应用程序全屏运行，使Web应用程序更像本地应用程序。 // 找到适合浏览器的全屏方法 123456789function launchFullScreen(element) &amp;#123;    if(element.requestFullScreen) &amp;#123;        ele">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5新的 API">
+<meta property="og:url" content="https://github.com/RanderE/pzdBlog.github.io.git/2019/07/01/HTML5新api/index.html">
+<meta property="og:site_name" content="PzdBlog">
+<meta property="og:description" content="HTML5新的 API1.  全屏API（Fullscreen API）　　该API允许开发者以编程方式将Web应用程序全屏运行，使Web应用程序更像本地应用程序。 // 找到适合浏览器的全屏方法 123456789function launchFullScreen(element) &amp;#123;    if(element.requestFullScreen) &amp;#123;        ele">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-01T10:07:50.017Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5新的 API">
+<meta name="twitter:description" content="HTML5新的 API1.  全屏API（Fullscreen API）　　该API允许开发者以编程方式将Web应用程序全屏运行，使Web应用程序更像本地应用程序。 // 找到适合浏览器的全屏方法 123456789function launchFullScreen(element) &amp;#123;    if(element.requestFullScreen) &amp;#123;        ele">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/RanderE/pzdBlog.github.io.git/2019/07/01/HTML5新api/">
+
+
+
+
+
+  <title>HTML5新的 API | PzdBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PzdBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/RanderE/pzdBlog.github.io.git/2019/07/01/HTML5新api/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="peizhengdong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PzdBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5新的 API</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-01T18:05:58+08:00">
+                2019-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="HTML5新的-API"><a href="#HTML5新的-API" class="headerlink" title="HTML5新的 API"></a>HTML5新的 API</h3><h4 id="1-全屏API（Fullscreen-API）"><a href="#1-全屏API（Fullscreen-API）" class="headerlink" title="1.  全屏API（Fullscreen API）"></a>1.  全屏API（Fullscreen API）</h4><p>　　该API允许开发者以编程方式将Web应用程序全屏运行，使Web应用程序更像本地应用程序。<br> // 找到适合浏览器的全屏方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">launchFullScreen</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(element.requestFullScreen) &#123;</span><br><span class="line">        element.requestFullScreen();</span><br><span class="line">    &#125; elseif(element.mozRequestFullScreen) &#123;</span><br><span class="line">        element.mozRequestFullScreen();</span><br><span class="line">    &#125; elseif(element.webkitRequestFullScreen) &#123;</span><br><span class="line">        element.webkitRequestFullScreen();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>// 启动全屏模式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">launchFullScreen(<span class="built_in">document</span>.documentElement); <span class="comment">// the whole page</span></span><br><span class="line">launchFullScreen(<span class="built_in">document</span>.getElementById(<span class="string">"videoElement"</span>)); <span class="comment">// any individual element</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-页面可见性API（Page-Visibility-API）"><a href="#2-页面可见性API（Page-Visibility-API）" class="headerlink" title="2.  页面可见性API（Page Visibility API）"></a>2.  页面可见性API（Page Visibility API）</h4><p>　　该API可以用来检测页面对于用户的可见性，即返回用户当前浏览的页面或标签的状态变化。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置隐藏属性和可见改变事件的名称，属性需要加浏览器前缀</span></span><br><span class="line"><span class="comment">// since some browsers only offer vendor-prefixed support</span></span><br><span class="line"><span class="keyword">var</span> hidden, state, visibilityChange;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">document</span>.hidden !== <span class="string">"undefined"</span>) &#123;</span><br><span class="line">    hidden = <span class="string">"hidden"</span>;</span><br><span class="line">    visibilityChange = <span class="string">"visibilitychange"</span>;</span><br><span class="line">    state = <span class="string">"visibilityState"</span>;</span><br><span class="line">&#125; elseif(<span class="keyword">typeof</span> <span class="built_in">document</span>.mozHidden !== <span class="string">"undefined"</span>) &#123;</span><br><span class="line">    hidden = <span class="string">"mozHidden"</span>;</span><br><span class="line">    visibilityChange = <span class="string">"mozvisibilitychange"</span>;</span><br><span class="line">    state = <span class="string">"mozVisibilityState"</span>;</span><br><span class="line">&#125; elseif(<span class="keyword">typeof</span> <span class="built_in">document</span>.msHidden !== <span class="string">"undefined"</span>) &#123;</span><br><span class="line">    hidden = <span class="string">"msHidden"</span>;</span><br><span class="line">    visibilityChange = <span class="string">"msvisibilitychange"</span>;</span><br><span class="line">    state = <span class="string">"msVisibilityState"</span>;</span><br><span class="line">&#125; elseif(<span class="keyword">typeof</span> <span class="built_in">document</span>.webkitHidden !== <span class="string">"undefined"</span>) &#123;</span><br><span class="line">    hidden = <span class="string">"webkitHidden"</span>;</span><br><span class="line">    visibilityChange = <span class="string">"webkitvisibilitychange"</span>;</span><br><span class="line">    state = <span class="string">"webkitVisibilityState"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加一个标题改变的监听器</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(visibilityChange, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line"><span class="comment">// 开始或停止状态处理</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-getUserMedia-API"><a href="#3-getUserMedia-API" class="headerlink" title="3.  getUserMedia API"></a>3.  getUserMedia API</h4><p>　　该API允许Web应用程序访问摄像头和麦克风，而无需使用插件。<br> // 设置事件监听器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 获取元素</span></span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>),</span><br><span class="line">    context = canvas.getContext(<span class="string">"2d"</span>),</span><br><span class="line">    video = <span class="built_in">document</span>.getElementById(<span class="string">"video"</span>),</span><br><span class="line">    videoObj = &#123; <span class="string">"video"</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">    errBack = <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"Video capture error: "</span>, error.code);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置video监听器</span></span><br><span class="line">    <span class="keyword">if</span>(navigator.getUserMedia) &#123; <span class="comment">// Standard</span></span><br><span class="line">    navigator.getUserMedia(videoObj, <span class="function"><span class="keyword">function</span>(<span class="params">stream</span>) </span>&#123;</span><br><span class="line">      video.src = stream;</span><br><span class="line">      video.play();</span><br><span class="line">    &#125;, errBack);</span><br><span class="line">    &#125; elseif(navigator.webkitGetUserMedia) &#123; <span class="comment">// WebKit-prefixed</span></span><br><span class="line">        navigator.webkitGetUserMedia(videoObj, <span class="function"><span class="keyword">function</span>(<span class="params">stream</span>)</span>&#123;</span><br><span class="line">          video.src = <span class="built_in">window</span>.webkitURL.createObjectURL(stream);</span><br><span class="line">          video.play();</span><br><span class="line">        &#125;, errBack);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-电池API（Battery-API）"><a href="#4-电池API（Battery-API）" class="headerlink" title="4.  电池API（Battery API）"></a>4.  电池API（Battery API）</h4><p>这是一个针对移动设备应用程序的API，主要用于检测设备电池信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 电池属性</span></span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">"Battery charging: "</span>, battery.charging); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">"Battery level: "</span>, battery.level); <span class="comment">// 0.58</span></span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">"Battery discharging time: "</span>, battery.dischargingTime);</span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">"Battery charging time: "</span>, battery.dischargingTime);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加事件监听器</span></span><br><span class="line">battery.addEventListener(<span class="string">"chargingchange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.warn(<span class="string">"Battery charge change: "</span>, battery.charging);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-Link-Prefetching"><a href="#5-Link-Prefetching" class="headerlink" title="5.  Link Prefetching"></a>5.  Link Prefetching</h4><p>　　预加载网页内容，为浏览者提供一个平滑的浏览体验。 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"prefetch"</span> <span class="attr">href</span>=<span class="string">"http://davidwalsh.name/css-enhancements-user-experience"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- just an image --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"prefetch"</span> <span class="attr">href</span>=<span class="string">"http://davidwalsh.name/wp-content/themes/walshbook3/images/sprite.png"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="”-”和“-”的不同"><a href="#”-”和“-”的不同" class="headerlink" title="”==”和“===”的不同"></a>”==”和“===”的不同</h3><h4 id="“-”"><a href="#“-”" class="headerlink" title="“===”"></a>“===”</h4><p>三个等号我们称为等同符，当等号两边的值为相同类型的时候，直接比较等号两边的值，值相同则返回true，若等号两边的值类型不同时直接返回false。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">例：100===&quot;100&quot;   //返回false</span><br><span class="line"></span><br><span class="line">	abc===&apos;abc&apos;   //返回false</span><br><span class="line"></span><br><span class="line">	&apos;abc&apos;===&quot;abc&quot;  //返回true</span><br><span class="line"></span><br><span class="line">	NaN===NaN   //返回false</span><br><span class="line"></span><br><span class="line"> 	false===false  //返回true</span><br></pre></td></tr></table></figure>
+
+<h4 id="“-”-1"><a href="#“-”-1" class="headerlink" title="“==”"></a>“==”</h4><p>​    两个等号我们称为等值符，当等号两边的值为相同类型时比较值是否相同，类型不同时会发生类型的自动转换，转换为相同的类型后再作比较。</p>
+<p>类型转换规则：</p>
+<p>1）如果等号两边是boolean、string、number三者中任意两者进行比较时，优先转换为数字进行比较。</p>
+<p>2）如果等号两边出现了null或undefined,null和undefined除了和自己相等，就彼此相等</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例：100==“100”    //返回true</span><br><span class="line"></span><br><span class="line">   1==true          //返回true</span><br><span class="line"></span><br><span class="line">   “1”==“01”      //返回false，此处等号两边值得类型相同，不要再转换类型了！！</span><br><span class="line"></span><br><span class="line">   NaN==NaN  //返回false，NaN和所有值包括自己都不相等。</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/01/promise/" rel="next" title="Promise">
+                <i class="fa fa-chevron-left"></i> Promise
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/01/jQuery/" rel="prev" title="JQuery学习">
+                JQuery学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">peizhengdong</p>
+              <p class="site-description motion-element" itemprop="description">PzdBlog's personal blog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5新的-API"><span class="nav-number">1.</span> <span class="nav-text">HTML5新的 API</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-全屏API（Fullscreen-API）"><span class="nav-number">1.1.</span> <span class="nav-text">1.  全屏API（Fullscreen API）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-页面可见性API（Page-Visibility-API）"><span class="nav-number">1.2.</span> <span class="nav-text">2.  页面可见性API（Page Visibility API）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-getUserMedia-API"><span class="nav-number">1.3.</span> <span class="nav-text">3.  getUserMedia API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-电池API（Battery-API）"><span class="nav-number">1.4.</span> <span class="nav-text">4.  电池API（Battery API）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Link-Prefetching"><span class="nav-number">1.5.</span> <span class="nav-text">5.  Link Prefetching</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#”-”和“-”的不同"><span class="nav-number">2.</span> <span class="nav-text">”==”和“===”的不同</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#“-”"><span class="nav-number">2.1.</span> <span class="nav-text">“===”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“-”-1"><span class="nav-number">2.2.</span> <span class="nav-text">“==”</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">peizhengdong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
